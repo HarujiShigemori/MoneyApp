@@ -92,11 +92,22 @@
                     <connections>
                         <outlet property="tableView" destination="rXZ-xr-mTa" id="htu-pW-q0c"/>
                         <outlet property="titleLabel" destination="Oeh-Vm-ETJ" id="PLa-qe-rxJ"/>
+                        <segue destination="szO-Yl-rgc" kind="show" identifier="Calc1" id="8s8-JI-pWU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfp-gf-fQj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="966.66666666666674" y="-458.03571428571428"/>
+        </scene>
+        <!--Calc1-->
+        <scene sceneID="s2E-XJ-uBi">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Calc1" storyboardName="Calc1" id="szO-Yl-rgc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vFj-DS-JsQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C6l-cG-vNN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1633" y="-725"/>
         </scene>
     </scenes>
     <resources>
