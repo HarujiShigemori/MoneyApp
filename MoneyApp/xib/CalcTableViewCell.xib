@@ -18,53 +18,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="LlE-5C-mfU">
-                        <rect key="frame" x="15" y="15" width="377" height="100"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7s3-eX-w5V">
+                        <rect key="frame" x="20" y="10" width="374" height="112"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="uKG-ai-x4m">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="例 : 100万円を年利3%で運用した場合の5年後の金額" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzI-oP-m1O">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="72.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="計算する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipN-bp-OBz">
-                                        <rect key="frame" x="0.0" y="78.5" width="200" height="21.5"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="t2c-wo-4vo"/>
-                                    <constraint firstAttribute="width" constant="200" id="yc5-KN-7Ib"/>
-                                </constraints>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="例 : 100万円を年利3%で運用した場合の5年後の金額" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzI-oP-m1O">
+                                <rect key="frame" x="0.0" y="0.0" width="187" height="112"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gCx-np-iTO">
-                                <rect key="frame" x="207" y="0.0" width="170" height="100"/>
+                                <rect key="frame" x="187" y="0.0" width="187" height="112"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="OiU-B6-hqF"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="LlE-5C-mfU" secondAttribute="bottom" constant="15" id="9q6-IN-sqE"/>
-                    <constraint firstItem="LlE-5C-mfU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="J2w-Lm-h6L"/>
-                    <constraint firstAttribute="trailing" secondItem="LlE-5C-mfU" secondAttribute="trailing" constant="15" id="JnQ-In-NaE"/>
-                    <constraint firstItem="LlE-5C-mfU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Y3v-EB-8fu"/>
+                    <constraint firstAttribute="trailing" secondItem="7s3-eX-w5V" secondAttribute="trailing" constant="20" id="ANM-gV-7nb"/>
+                    <constraint firstItem="7s3-eX-w5V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="MoU-bs-Q1G"/>
+                    <constraint firstAttribute="bottom" secondItem="7s3-eX-w5V" secondAttribute="bottom" constant="10" id="nBz-oC-tgL"/>
+                    <constraint firstItem="7s3-eX-w5V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="yBs-2U-tg9"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="CellImageView" destination="gCx-np-iTO" id="sZ6-G8-Egy"/>
-                <outlet property="appealLabel" destination="ipN-bp-OBz" id="CSL-8J-hYe"/>
                 <outlet property="label" destination="uzI-oP-m1O" id="VvS-Po-PJX"/>
             </connections>
             <point key="canvasLocation" x="118.84057971014494" y="37.5"/>
@@ -73,9 +53,6 @@
     <resources>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

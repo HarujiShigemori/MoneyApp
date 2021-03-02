@@ -13,7 +13,7 @@ class CalcViewController: UIViewController{
     @IBOutlet var tableView: UITableView!
     
     let exampleArray = [
-        ["例 : 100万円を年利3％で運用した場合の5年後の金額はいくらか","IMG_0213"],
+        ["最初に出すお金と毎月の積立金額から、最終金額を求める","IMG_0213"],
         ["例 : 年利3％で5年後に100万円を用意するためには、元本がいくら必要か","IMG_0214"],
         ["例 : 年利3％、毎年30万円を5年間積み立てた場合の5年後の金額はいくらか","IMG_0216"],
         ["例 : 年利3％、5年後に100万円を用意するためには、毎年いくら積み立てる必要があるか","IMG_0219"],
@@ -44,7 +44,11 @@ class CalcViewController: UIViewController{
 extension CalcViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        var height = 140
+        if view.frame.size.width >= 500 {
+            height = 250
+        }
+        return CGFloat(height)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

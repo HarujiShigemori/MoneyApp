@@ -9,15 +9,32 @@ import UIKit
 
 class Calc1ViewController: UIViewController {
     
-    @IBOutlet weak var calcCutomView: CalcCustomView!
+    @IBOutlet weak var startTextField: UITextField!
+    @IBOutlet weak var monthlyTextField: UITextField!
+    @IBOutlet weak var yearsTextField: UITextField!
+    @IBOutlet weak var AnnualYieldTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.addSubview(calcCutomView)
+        
+        startTextField.keyboardType = UIKeyboardType.numberPad
+        monthlyTextField.keyboardType = UIKeyboardType.numberPad
+        yearsTextField.keyboardType = UIKeyboardType.numberPad
+        AnnualYieldTextField.keyboardType = UIKeyboardType.numberPad
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
 
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

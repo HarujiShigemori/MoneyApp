@@ -16,14 +16,13 @@ class CalcTableViewCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet var CellImageView: UIImageView!
-    @IBOutlet weak var appealLabel: UILabel!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        appealLabel.layer.cornerRadius = 10
-        appealLabel.clipsToBounds = true
+        
+        
+        
         CellImageView.layer.cornerRadius = 5
     }
     
@@ -33,9 +32,12 @@ class CalcTableViewCell: UITableViewCell {
         CellImageView.image = UIImage(named: imageStr)
         CellImageView.contentMode = .scaleToFill
         
+        if contentView.frame.size.width >= 500 {
+            label.font = label.font.withSize(30)
+            
+        }
+        
     }
-    
-    
     
     
 }

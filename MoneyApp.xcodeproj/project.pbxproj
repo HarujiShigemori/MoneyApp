@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		BAA9CE0325E54CEA005A5648 /* CalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9CE0225E54CEA005A5648 /* CalcViewController.swift */; };
 		BAA9CE0725E55005005A5648 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9CE0625E55005005A5648 /* TabBarController.swift */; };
-		BACEB94925E786E2007E9511 /* CalcCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEB94825E786E2007E9511 /* CalcCustomView.swift */; };
-		BACEB94C25E786FB007E9511 /* CalcCustom.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACEB94B25E786FB007E9511 /* CalcCustom.xib */; };
 		BAD50E2E25E6740400122273 /* CalcTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD50E2C25E6740400122273 /* CalcTableViewCell.swift */; };
 		BAD50E2F25E6740400122273 /* CalcTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD50E2D25E6740400122273 /* CalcTableViewCell.xib */; };
 		BAD50E3325E6746600122273 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD50E3225E6746600122273 /* Color.swift */; };
@@ -26,8 +24,6 @@
 /* Begin PBXFileReference section */
 		BAA9CE0225E54CEA005A5648 /* CalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcViewController.swift; sourceTree = "<group>"; };
 		BAA9CE0625E55005005A5648 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		BACEB94825E786E2007E9511 /* CalcCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcCustomView.swift; sourceTree = "<group>"; };
-		BACEB94B25E786FB007E9511 /* CalcCustom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalcCustom.xib; sourceTree = "<group>"; };
 		BAD50E2C25E6740400122273 /* CalcTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcTableViewCell.swift; sourceTree = "<group>"; };
 		BAD50E2D25E6740400122273 /* CalcTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalcTableViewCell.xib; sourceTree = "<group>"; };
 		BAD50E3225E6746600122273 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -74,8 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				BAD50E2D25E6740400122273 /* CalcTableViewCell.xib */,
-				BACEB94825E786E2007E9511 /* CalcCustomView.swift */,
-				BACEB94B25E786FB007E9511 /* CalcCustom.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -199,7 +193,6 @@
 				BAD50E2F25E6740400122273 /* CalcTableViewCell.xib in Resources */,
 				BAD8D03025E7398F00B03DA2 /* Calc1.storyboard in Resources */,
 				BAF405C525E4904A00F0930C /* LaunchScreen.storyboard in Resources */,
-				BACEB94C25E786FB007E9511 /* CalcCustom.xib in Resources */,
 				BAF405C225E4904A00F0930C /* Assets.xcassets in Resources */,
 				BAF405C025E4904A00F0930C /* TabBar.storyboard in Resources */,
 			);
@@ -212,7 +205,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BACEB94925E786E2007E9511 /* CalcCustomView.swift in Sources */,
 				BAA9CE0325E54CEA005A5648 /* CalcViewController.swift in Sources */,
 				BAA9CE0725E55005005A5648 /* TabBarController.swift in Sources */,
 				BAF405B925E4904A00F0930C /* AppDelegate.swift in Sources */,
