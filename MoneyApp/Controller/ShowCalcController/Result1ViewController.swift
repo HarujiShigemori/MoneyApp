@@ -13,10 +13,17 @@ class Result1ViewController: UIViewController {
     var monthly: Int?
     var years: Int?
     var annualYield: Int?
+    
+    var calculatorModel = CalculatorModel()
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let array = calculatorModel.calcFinal(start: start!, monthly: monthly!, years: years!, annualYield: annualYield!)
+        print(array)
         
         // Do any additional setup after loading the view.
     }
