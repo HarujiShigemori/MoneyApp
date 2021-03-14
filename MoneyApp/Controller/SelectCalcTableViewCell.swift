@@ -1,13 +1,8 @@
-//
-//  CalcTableViewCell.swift
-//  MoneyApp
-//
-//  Created by 重盛晴二 on 2021/02/24.
-//
+
 
 import UIKit
 
-class CalcTableViewCell: UITableViewCell {
+class SelectCalcTableViewCell: UITableViewCell {
     
     static let identifier = "CalcTableViewCell"
     static func nib() -> UINib {
@@ -20,8 +15,6 @@ class CalcTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
         
         CellImageView.layer.cornerRadius = 5
     }
@@ -36,8 +29,5 @@ class CalcTableViewCell: UITableViewCell {
             label.font = label.font.withSize(30)
             
         }
-        
     }
-    
-    
 }

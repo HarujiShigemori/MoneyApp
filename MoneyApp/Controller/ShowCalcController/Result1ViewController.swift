@@ -1,9 +1,4 @@
-//
-//  Result1ViewController.swift
-//  MoneyApp
-//
-//  Created by 重盛晴二 on 2021/03/05.
-//
+
 
 import UIKit
 
@@ -26,39 +21,30 @@ class Result1ViewController: UIViewController {
     @IBOutlet weak var lastResultLabel: UILabel!
     
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         showResult()
-        // Do any additional setup after loading the view.
+        
     }
+    
     
     private func showResult() {
         
-        let array = calculatorModel.calcFinal(start: start!, monthly: monthly!, years: years!, annualYield: annualYield!)
-        startLabel.text = "\(String(start!))円"
-        monthlyLabel.text = "\(String(monthly!))円"
+        startLabel.text = "\(Comma.addComma(num: String(start!)))円"
+        monthlyLabel.text = "\(Comma.addComma(num: String(monthly!)))円"
         yearsLabel.text = "\(String(years!))年"
         annualYieldLabel.text = "\(String(annualYield!))%"
         
-        InvestmentAmountLabel.text = "\(String(array.investmentAmount))円"
-        revenueLabel.text = "\(String(array.interest))円"
-        lastResultLabel.text = "\(String(array.result.last!))円"
+        let array = calculatorModel.calcFinalAmount(start: start!, monthly: monthly!, years: years!, annualYield: annualYield!)
+        
+        InvestmentAmountLabel.text = "\(Comma.addComma(num: array.investmentAmount))円"
+        revenueLabel.text = "\(Comma.addComma(num: array.interest))円"
+        lastResultLabel.text = "\(Comma.addComma(num: String(array.result.last!)))円"
     }
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

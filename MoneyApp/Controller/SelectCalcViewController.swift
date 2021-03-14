@@ -1,13 +1,7 @@
-//
-//  CalcViewController.swift
-//  MoneyApp
-//
-//  Created by 重盛晴二 on 2021/02/23.
-//
 
 import UIKit
 
-class CalcViewController: UIViewController{
+class SelectCalcViewController: UIViewController{
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet var tableView: UITableView!
@@ -29,7 +23,7 @@ class CalcViewController: UIViewController{
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(CalcTableViewCell.nib(), forCellReuseIdentifier: CalcTableViewCell.identifier)
+        tableView.register(SelectCalcTableViewCell.nib(), forCellReuseIdentifier: SelectCalcTableViewCell.identifier)
         
     }
     
@@ -41,7 +35,7 @@ class CalcViewController: UIViewController{
 }
 
 
-extension CalcViewController: UITableViewDelegate,UITableViewDataSource {
+extension SelectCalcViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var height = 140
@@ -57,7 +51,7 @@ extension CalcViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: CalcTableViewCell.identifier, for: indexPath) as! CalcTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: SelectCalcTableViewCell.identifier, for: indexPath) as! SelectCalcTableViewCell
         
         cell.setCell(text: exampleArray[indexPath.row][0], imageStr: exampleArray[indexPath.row][1])
         

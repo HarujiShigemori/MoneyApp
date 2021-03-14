@@ -1,15 +1,9 @@
-//
-//  Calc.swift
-//  MoneyApp
-//
-//  Created by 重盛晴二 on 2021/03/05.
-//
 
 import Foundation
 
 class CalculatorModel {
     
-    func calcFinal(start:Int,monthly:Int,years:Int,annualYield:Int) -> (result:Array<Int>, investmentAmount:Int , interest:Int){
+    func calcFinalAmount(start:Int,monthly:Int,years:Int,annualYield:Int) -> (result:Array<Int>, investmentAmount:String , interest:String){
 
         let totalMonth = years * 12
 
@@ -37,8 +31,8 @@ class CalculatorModel {
             }
         }
         
-        let investmentAmount = start + monthly * totalMonth
-        let interest = result.last! - investmentAmount
+        let investmentAmount = String(start + monthly * totalMonth)
+        let interest = String(result.last! - Int(investmentAmount)!)
         
         return (result,investmentAmount,interest)
     }
