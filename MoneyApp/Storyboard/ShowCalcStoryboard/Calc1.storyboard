@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年数と年利は必ず記入してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2H-k4-JlZ">
-                                <rect key="frame" x="47" y="771" width="320" height="22"/>
+                                <rect key="frame" x="47" y="761" width="320" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="871-Jy-kFW"/>
                                     <constraint firstAttribute="height" constant="22" id="hat-7Q-INF"/>
@@ -58,6 +58,15 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="496"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上限を超えた場合" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfE-lG-Imy">
+                                <rect key="frame" x="47" y="788" width="320" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="zcn-u6-6yC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".HiraKakuInterface-W3" family=".AppleJapaneseFont" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dbp-Iz-Zb9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -68,17 +77,20 @@
                             <constraint firstAttribute="bottom" secondItem="ljG-Se-nCa" secondAttribute="bottom" constant="140" id="B06-1A-dQa"/>
                             <constraint firstItem="J2H-k4-JlZ" firstAttribute="centerX" secondItem="Yns-uH-lwf" secondAttribute="centerX" id="Dte-gX-QfK"/>
                             <constraint firstItem="Dbp-Iz-Zb9" firstAttribute="trailing" secondItem="ljG-Se-nCa" secondAttribute="trailing" constant="100" id="JlK-Q5-CSS"/>
-                            <constraint firstItem="J2H-k4-JlZ" firstAttribute="top" secondItem="ljG-Se-nCa" secondAttribute="bottom" constant="15" id="KwD-Xo-bPS"/>
+                            <constraint firstItem="J2H-k4-JlZ" firstAttribute="top" secondItem="ljG-Se-nCa" secondAttribute="bottom" constant="5" id="KwD-Xo-bPS"/>
                             <constraint firstItem="EQv-fa-EaD" firstAttribute="top" secondItem="Dbp-Iz-Zb9" secondAttribute="top" constant="10" id="OX5-qd-Mmt"/>
                             <constraint firstAttribute="bottom" secondItem="1fe-8a-0sI" secondAttribute="bottom" constant="300" id="RoW-r9-byY"/>
                             <constraint firstItem="EQv-fa-EaD" firstAttribute="leading" secondItem="Dbp-Iz-Zb9" secondAttribute="leading" constant="30" id="T66-0U-IC6"/>
+                            <constraint firstItem="ZfE-lG-Imy" firstAttribute="centerX" secondItem="Yns-uH-lwf" secondAttribute="centerX" id="gJb-wf-JOd"/>
                             <constraint firstItem="Dbp-Iz-Zb9" firstAttribute="trailing" secondItem="1fe-8a-0sI" secondAttribute="trailing" id="odS-2R-gr9"/>
+                            <constraint firstItem="ZfE-lG-Imy" firstAttribute="top" secondItem="J2H-k4-JlZ" secondAttribute="bottom" constant="5" id="xgM-Y8-cGl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vAh-eV-EjG"/>
                     <connections>
                         <outlet property="attentionLabel" destination="J2H-k4-JlZ" id="JyP-tt-HIw"/>
                         <outlet property="customView" destination="1fe-8a-0sI" id="oj0-JC-bPG"/>
+                        <outlet property="guardTheUpperLimitLabel" destination="ZfE-lG-Imy" id="EBy-w1-2go"/>
                         <outlet property="toResultButton" destination="ljG-Se-nCa" id="cI1-ID-CkF"/>
                         <segue destination="GCn-GE-pTD" kind="presentation" identifier="ResultVC" modalPresentationStyle="fullScreen" id="Lo8-H6-F68"/>
                     </connections>
@@ -184,10 +196,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8F-c3-VIX">
-                                <rect key="frame" x="30" y="293" width="354" height="36"/>
+                                <rect key="frame" x="30" y="293" width="354" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投資金額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dar-eq-QGt">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="110" id="ZWz-zu-DLB"/>
                                         </constraints>
@@ -195,8 +207,8 @@
                                         <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000円" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aik-eN-PYe">
-                                        <rect key="frame" x="110" y="0.0" width="244" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aik-eN-PYe">
+                                        <rect key="frame" x="110" y="0.0" width="244" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -204,10 +216,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bn2-BQ-SuL">
-                                <rect key="frame" x="30" y="344" width="354" height="36"/>
+                                <rect key="frame" x="30" y="338" width="354" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="運用収益" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYT-Dl-kiU">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="110" id="9sr-oC-24r"/>
                                         </constraints>
@@ -215,8 +227,8 @@
                                         <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000円" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXs-I8-qFb">
-                                        <rect key="frame" x="110" y="0.0" width="244" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXs-I8-qFb">
+                                        <rect key="frame" x="110" y="0.0" width="244" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -224,10 +236,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3BQ-Wt-YBN">
-                                <rect key="frame" x="30" y="395" width="354" height="36"/>
+                                <rect key="frame" x="30" y="383" width="354" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最終金額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz7-pQ-EhR">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="110" id="pTN-hH-FeZ"/>
                                         </constraints>
@@ -235,19 +247,29 @@
                                         <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000円" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heu-zd-htS">
-                                        <rect key="frame" x="110" y="0.0" width="244" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heu-zd-htS">
+                                        <rect key="frame" x="110" y="0.0" width="244" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="計算結果の上限を超えました（上限１兆円）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onP-Kl-X7d">
+                                <rect key="frame" x="47" y="443" width="320" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Ac9-Ha-3Iu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".HiraKakuInterface-W3" family=".AppleJapaneseFont" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1wZ-VB-bfn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bn2-BQ-SuL" firstAttribute="top" secondItem="l8F-c3-VIX" secondAttribute="bottom" constant="15" id="0wN-tU-mD4"/>
+                            <constraint firstItem="onP-Kl-X7d" firstAttribute="centerX" secondItem="j0X-eS-thd" secondAttribute="centerX" id="5u2-vt-nlI"/>
                             <constraint firstItem="1wZ-VB-bfn" firstAttribute="trailing" secondItem="3BQ-Wt-YBN" secondAttribute="trailing" constant="30" id="7do-4s-OMW"/>
                             <constraint firstItem="3BQ-Wt-YBN" firstAttribute="leading" secondItem="1wZ-VB-bfn" secondAttribute="leading" constant="30" id="8OB-oC-QiT"/>
                             <constraint firstItem="NmC-UO-dck" firstAttribute="leading" secondItem="1wZ-VB-bfn" secondAttribute="leading" constant="30" id="C2F-VG-OhZ"/>
@@ -258,6 +280,7 @@
                             <constraint firstItem="idQ-QB-eGI" firstAttribute="leading" secondItem="1wZ-VB-bfn" secondAttribute="leading" constant="30" id="RJ1-mY-Vrb"/>
                             <constraint firstItem="idQ-QB-eGI" firstAttribute="top" secondItem="1wZ-VB-bfn" secondAttribute="top" constant="10" id="UZ5-Si-3ZW"/>
                             <constraint firstItem="bn2-BQ-SuL" firstAttribute="leading" secondItem="1wZ-VB-bfn" secondAttribute="leading" constant="30" id="Uzx-zL-nIc"/>
+                            <constraint firstItem="onP-Kl-X7d" firstAttribute="top" secondItem="3BQ-Wt-YBN" secondAttribute="bottom" constant="30" id="cZj-bq-I0y"/>
                             <constraint firstItem="1wZ-VB-bfn" firstAttribute="trailing" secondItem="l8F-c3-VIX" secondAttribute="trailing" constant="30" id="eeb-MQ-19f"/>
                             <constraint firstItem="l8F-c3-VIX" firstAttribute="top" secondItem="NmC-UO-dck" secondAttribute="bottom" constant="30" id="m5Z-Lg-WXJ"/>
                             <constraint firstItem="NmC-UO-dck" firstAttribute="top" secondItem="idQ-QB-eGI" secondAttribute="bottom" constant="40" id="s5g-ky-EyR"/>
@@ -266,6 +289,7 @@
                     <connections>
                         <outlet property="InvestmentAmountLabel" destination="Aik-eN-PYe" id="rrp-QT-faJ"/>
                         <outlet property="annualYieldLabel" destination="Ymt-id-Iks" id="cht-Tj-tzZ"/>
+                        <outlet property="guardTheUpperLimitLabel" destination="onP-Kl-X7d" id="iKd-pK-nOp"/>
                         <outlet property="lastResultLabel" destination="heu-zd-htS" id="i9Y-Ap-1A1"/>
                         <outlet property="monthlyLabel" destination="f7X-gt-prK" id="oO0-bv-b2d"/>
                         <outlet property="revenueLabel" destination="OXs-I8-qFb" id="MvI-UY-jPs"/>

@@ -20,10 +20,13 @@ class Result1ViewController: UIViewController {
     @IBOutlet weak var revenueLabel: UILabel!
     @IBOutlet weak var lastResultLabel: UILabel!
     
+    @IBOutlet weak var guardTheUpperLimitLabel: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         showResult()
         
     }
@@ -38,9 +41,12 @@ class Result1ViewController: UIViewController {
         
         let array = calculatorModel.calcFinalAmount(start: start!, monthly: monthly!, years: years!, annualYield: annualYield!)
         
-        InvestmentAmountLabel.text = "\(Comma.addComma(num: array.investmentAmount))円"
-        revenueLabel.text = "\(Comma.addComma(num: array.interest))円"
-        lastResultLabel.text = "\(Comma.addComma(num: String(array.result.last!)))円"
+        if array.over == false{
+            guardTheUpperLimitLabel.isHidden = true
+            InvestmentAmountLabel.text = "\(Comma.addComma(num: array.investmentAmount))円"
+            revenueLabel.text = "\(Comma.addComma(num: array.interest))円"
+            lastResultLabel.text = "\(Comma.addComma(num: String(array.result.last!)))円"
+        }
     }
     
     @IBAction func backButton(_ sender: Any) {

@@ -26,11 +26,6 @@ class SelectCalcViewController: UIViewController{
         tableView.register(SelectCalcTableViewCell.nib(), forCellReuseIdentifier: SelectCalcTableViewCell.identifier)
         
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
 
 }
 

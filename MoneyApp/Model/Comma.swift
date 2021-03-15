@@ -6,6 +6,10 @@ class Comma {
     
     static func addComma(num:String) -> String {
         
+        if deleteComma(num: num) == 0 {
+            return "0"
+        }
+        
         if num != "" {
             let formatter = NumberFormatter()
             formatter.numberStyle = NumberFormatter.Style.decimal
@@ -18,5 +22,13 @@ class Comma {
             return str
         }
         return ""
+    }
+    
+    static func deleteComma(num:String) -> Int{
+        var cutNum = num.replacingOccurrences(of: ",", with: "")
+        if cutNum == "" || cutNum.count > 13{
+            cutNum = "0"
+        }
+        return Int(cutNum)!
     }
 }
